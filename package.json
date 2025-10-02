@@ -1,0 +1,9 @@
+{
+  "name": "itelective3_food",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Blank starter template",
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Explorer</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Food Explorer</h1>
+      <p>Browse Filipino favorites powered by the /api/foods endpoint.</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Filters</h2>
+        <form id="filter-form">
+          <label>
+            Search
+            <input type="text" name="q" placeholder="Try halo or soup" />
+          </label>
+          <label>
+            Category
+            <select name="category" id="category-select">
+              <option value="">All</option>
+            </select>
+          </label>
+          <label>
+            Max price
+            <input type="number" name="maxPrice" min="0" step="10" />
+          </label>
+          <label>
+            Spicy only
+            <input type="checkbox" name="spicy" value="true" />
+          </label>
+          <button type="submit">Apply</button>
+          <button type="reset" id="reset-button">Reset</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Add a new dish</h2>
+        <form id="create-form">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Category
+            <input type="text" name="category" required />
+          </label>
+          <label>
+            Price
+            <input type="number" name="price" min="0" step="10" required />
+          </label>
+          <label>
+            Description
+            <textarea name="description" rows="3"></textarea>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="spicy" /> Spicy
+          </label>
+          <button type="submit">Create</button>
+          <p class="form-status" id="create-status" hidden></p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Results</h2>
+        <p id="results-count"></p>
+        <ul id="foods-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <small>API health: <span id="health-status">checking…</span></small>
+    </footer>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
