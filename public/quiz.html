@@ -9,8 +9,9 @@
   <body>
     <div class="container">
       <header class="quiz-header">
-        <h1>🍕 Build The Perfect Pizza</h1>
+        <h1>🍕 Build Your Perfect Pizza</h1>
         <p>Answer 5 questions correctly to create the unarguably best pizza!</p>
+        <a href="/" class="back-link">← Back to Food Explorer</a>
       </header>
 
       <main class="quiz-main">
@@ -23,7 +24,7 @@
         </div>
 
         <!-- Quiz Content Area -->
-        <div class="quiz-content" id="quiz-content">
+        <div class="quiz-content">
           <!-- Pizza Visual Builder -->
           <div class="pizza-builder">
             <div class="pizza-container" id="pizza-container">
@@ -58,19 +59,13 @@
         </div>
 
         <!-- Final Success Screen -->
-        <div class="success-content" id="success-screen" style="display: none;">
-          <!-- Left Side - Pizza Photo (replaces the graphic) -->
-          <div class="success-pizza-display">
-            <div class="final-pizza-container">
+        <div class="success-screen" id="success-screen" style="display: none;">
+          <div class="success-content">
+            <h2>🎉 Congratulations!</h2>
+            <p>You've successfully created an authentic Roman-Style Margherita Pizza!</p>
+            
+            <div class="final-pizza-display">
               <img id="final-pizza-image" src="" alt="Roman Style Margherita Pizza" />
-            </div>
-          </div>
-
-          <!-- Right Side - Info (replaces the question area) -->
-          <div class="success-info-area">
-            <div class="success-header">
-              <h2>🎉 Congratulations!</h2>
-              <p>You've successfully created an authentic Roman-Style Margherita Pizza!</p>
             </div>
 
             <div class="pizza-info">
@@ -86,6 +81,7 @@
 
             <div class="success-actions">
               <button class="btn btn-primary" id="play-again-button">🔄 Play Again</button>
+              <a href="/" class="btn btn-secondary">← Back to Food Explorer</a>
             </div>
           </div>
         </div>
